@@ -1,0 +1,25 @@
+lst = input ("Please inset a set of paranthesis to be tested: ")
+
+### (())
+
+len(lst)
+
+### 4
+
+stack = list()
+
+i=0
+
+while i < len(lst):
+        if lst[i] == "(":
+            stack.append(str(lst[i]))
+                        
+        if lst[i] == ")" and stack[-1] == "(":
+            stack.pop()
+        
+        i +=1
+        
+if len(stack) == 0:
+    print ("Success !!!")
+else:
+    print("Error 404")
