@@ -1,0 +1,38 @@
+lst = input ("Please insert the 'n' values and the operations you want to attend, folowing the format a + b * c - d / e : ").split()
+
+['3', '*', '4', '/', '2', '+', '5']
+
+i=0
+    
+while i < len(lst):
+             
+    if lst[i] == '*':      
+             
+        x = float(lst[i-1])*float(lst[i+1])
+        lst[i-1] = str(x)
+        lst.pop(i)
+        lst.pop(i)
+        
+                
+    if lst[i] == '/':
+                                 
+        x = float(lst[i-1])/float(lst[i+1])
+        lst [i-1] = str(x)
+        lst.pop(i)
+        lst.pop(i)
+        
+    i += 1
+print (lst)
+            
+acc = float(lst[0])
+    
+for i in range (len(lst)):
+    if lst[i] == '+':
+        acc += float(lst[i+1])
+    if lst[i] == '-':
+        acc -= float(lst[i+1])
+        
+  
+
+print (acc)
+        
